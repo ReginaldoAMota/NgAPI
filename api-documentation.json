@@ -1,0 +1,443 @@
+{
+    "info": {
+        "_postman_id": "d67789aa-25b8-465a-9ac6-6efca1b9b743",
+        "name": "NGAPI",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "user",
+            "item": [
+                {
+                    "name": "getOne",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/user/1",
+                            "path": [
+                                "api",
+                                "user",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "getAll",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/user",
+                            "path": [
+                                "api",
+                                "user"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{localUrl}}/api/user",
+                            "path": [
+                                "api",
+                                "user"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"reginaldo_adriano@live.com\",\n  \"name\": \"Reginaldo\",\n  \"image\": \"\",\n  \"password\": \"123456\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "update",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{localUrl}}/api/user/4",
+                            "path": [
+                                "api",
+                                "user",
+                                "4"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Reginaldo Adriano Mota\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY4OTAwODY4NH0.K1yDZeCPtzCN-cKcNJK1rOiP2WI2WP5R4bfTXlks7OU",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "delete",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{localUrl}}/api/user/2",
+                            "path": [
+                                "api",
+                                "user",
+                                "2"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "post",
+            "item": [
+                {
+                    "name": "getOne",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/post/1",
+                            "path": [
+                                "api",
+                                "post",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "getAll",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/post",
+                            "path": [
+                                "api",
+                                "post"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{localUrl}}/api/post",
+                            "path": [
+                                "api",
+                                "post"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\": \"Teste Post\",\n  \"content\": \"teste\",\n  \"authorId\": 3\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "update",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{localUrl}}/api/post/1",
+                            "path": [
+                                "api",
+                                "post",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"content\": \"Teste4@email.com\"\n\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "delete",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{localUrl}}/api/post/1",
+                            "path": [
+                                "api",
+                                "post",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "getByAuthor",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/post/author/1",
+                            "path": [
+                                "api",
+                                "post",
+                                "author",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "comments",
+            "item": [
+                {
+                    "name": "getOne",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/comment/1",
+                            "path": [
+                                "api",
+                                "comment",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "getAll",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/comment",
+                            "path": [
+                                "api",
+                                "comment"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "getByAuthor",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/comment/author/3",
+                            "path": [
+                                "api",
+                                "comment",
+                                "author",
+                                "3"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{localUrl}}/api/comment",
+                            "path": [
+                                "api",
+                                "comment"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"content\": \"TEste do comentario\",\n  \"authorId\": 3,\n  \"postId\": 1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "update",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{localUrl}}/api/comment/1",
+                            "path": [
+                                "api",
+                                "comment",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"content\": \"Teste4@email.com\"\n\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "delete",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{localUrl}}/api/post/1",
+                            "path": [
+                                "api",
+                                "post",
+                                "1"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "getByPost",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{localUrl}}/api/comment/post/2",
+                            "path": [
+                                "api",
+                                "comment",
+                                "post",
+                                "2"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "auth",
+            "item": [
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{localUrl}}/api/login",
+                            "path": [
+                                "api",
+                                "login"
+                            ],
+                            "host": [
+                                "{{localurl}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"reginaldo_adriano@live.com\",\n  \"password\": \"123456\"\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
